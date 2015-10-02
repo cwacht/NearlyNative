@@ -12,6 +12,9 @@
   <body>
     Nearly Native
     <script>
+      var cacheBustedUrl = 'index.html?cache-bust=' + Date.now();
+      document.querySelector('#reload').href = cacheBustedUrl;
+    
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js', {scope: './'});
       }
