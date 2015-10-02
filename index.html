@@ -3,6 +3,7 @@
     <title>Nearly Native</title>
     <meta name="description" content="Simple Web App that feels as native as possible.">
     <meta name="theme-color" content="#4285f4">
+    <meta name="viewport" content="width=device-width">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" href="favicon.ico">
     <link rel="manifest" href="manifest.json">
@@ -10,5 +11,10 @@
   </head>
   <body>
     Nearly Native
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js', {scope: './'});
+      }
+    </script>
   </body>
 </html>
