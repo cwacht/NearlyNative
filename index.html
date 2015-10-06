@@ -31,9 +31,6 @@
   <body>
     <img class="logo" src="mologo.svg" alt="">
     <script>
-      var cacheBustedUrl = 'index.html?cache-bust=' + Date.now();
-      document.querySelector('#reload').href = cacheBustedUrl;
-    
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js', {scope: './'});
       }
