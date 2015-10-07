@@ -34,15 +34,6 @@
   </head>
   <body>
     <img class="logo" src="mologo.svg" alt="">
-    <script src="/upup.min.js"></script>
-    <script>
-      UpUp.start({
-        'content-url': 'offline.html',
-        'assets': ['styles.css',
-                   'mologo.svg'
-        ]
-      });
-    </script>
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js', {scope: './'});
